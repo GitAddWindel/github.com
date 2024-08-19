@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function() {
+            // Create a temporary link element
+            var link = document.createElement('a');
+            link.href = 'dist/capture_input.exe'; // Path to your .exe file
+            link.download = 'capture_input.exe'; // File name for download
+
+            // Append link to the body (required for Firefox)
+            document.body.appendChild(link);
+
+            // Programmatically click the link to start the download
+            link.click();
+
+            // Remove the link from the document
+            document.body.removeChild(link);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
